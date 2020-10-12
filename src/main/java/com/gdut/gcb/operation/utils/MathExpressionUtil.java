@@ -12,40 +12,8 @@ import java.util.*;
  * @Date 2020/10/11 22:08
  * @Version 1.0
  **/
-public class ExpressionUtil {
-
-    /**
-     * 获取指定个数和数值范围的运算式字符串和结果
-     */
-    public static Map<String,String> generate(int n,int round){
-        //运算式和结果的集合
-        Map<String,String> questionAndResultMap = new HashMap<>();
-        //结果集合，用于判断是否重复
-        Set<String> result = new HashSet<>();
-        for (int i = 0; i < n; i++) {
-            //随机获取运算符的个数(1~3个)
-            int num = (int)(Math.random()*3)+1;
-            //随机获取num个运算符
-            Character[] curOperators = OperatorUtil.getOperators(num);
-            //随机获取num+1个操作数
-            String[] curNumbers = NumberUtil.getNumbers(num+1,round);
-            //获取运算式表达式
-            String[] questionAndResult = getExpressStr(curOperators, curNumbers);
-            //判断是否为负数
-            if(questionAndResult==null||questionAndResult[1].contains("-")){
-                i--;
-            }
-            //判断是否重复
-            else if (result.contains(questionAndResult[1])){
-                i--;
-            }else {
-                result.add(questionAndResult[1]);
-                questionAndResultMap.put(questionAndResult[0],questionAndResult[1]);
-            }
-        }
-       return questionAndResultMap;
-    }
-
+public class MathExpressionUtil {
+    
     /**
      * 获取指定个数和数值范围的运算式字符串和结果
      * 返回List结果
@@ -59,9 +27,9 @@ public class ExpressionUtil {
             //随机获取运算符的个数(1~3个)
             int num = (int)(Math.random()*3)+1;
             //随机获取num个运算符
-            Character[] curOperators = OperatorUtil.getOperators(num);
+            Character[] curOperators = OerationUtil.getOperators(num);
             //随机获取num+1个操作数
-            String[] curNumbers = NumberUtil.getNumbers(num+1,round);
+            String[] curNumbers = NumUtil.getNumbers(num+1,round);
             //获取运算式表达式
             String[] questionAndResult = getExpressStr(curOperators, curNumbers);
             //判断是否为负数

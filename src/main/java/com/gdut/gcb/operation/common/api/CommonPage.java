@@ -5,8 +5,11 @@ import cn.hutool.core.convert.Convert;
 import java.util.List;
 
 /**
- * 分页数据封装类
- */
+ * @Author 古春波
+ * @Description 分页数据封装类
+ * @Date 2020/10/11 22:08
+ * @Version 1.0
+ **/
 public class CommonPage<T> {
     private Integer pageNum;
     private Integer pageSize;

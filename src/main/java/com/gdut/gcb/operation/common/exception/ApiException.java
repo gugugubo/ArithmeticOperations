@@ -3,9 +3,13 @@ package com.gdut.gcb.operation.common.exception;
 
 import com.gdut.gcb.operation.common.api.IErrorCode;
 
+
 /**
- * 自定义API异常
- */
+ * @Author 古春波
+ * @Description 自定义API异常
+ * @Date 2020/10/11 22:08
+ * @Version 1.0
+ **/
 public class ApiException extends RuntimeException {
     private IErrorCode errorCode;
 

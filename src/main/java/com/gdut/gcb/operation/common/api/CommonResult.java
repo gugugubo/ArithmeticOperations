@@ -1,8 +1,12 @@
 package com.gdut.gcb.operation.common.api;
 
+
 /**
- * 通用返回对象
- */
+ * @Author 古春波
+ * @Description 通用返回对象
+ * @Date 2020/10/11 22:08
+ * @Version 1.0
+ **/
 public class CommonResult<T> {
     private long code;
     private String message;

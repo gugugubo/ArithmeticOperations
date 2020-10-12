@@ -9,7 +9,7 @@ import java.util.Random;
  * @Date 2020/10/11 22:08
  * @Version 1.0
  **/
-class NumberUtil {
+class NumUtil {
 
     /**
      * 随机获取num个操作数的数组

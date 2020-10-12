@@ -1,7 +1,7 @@
 package com.gdut.gcb.operation.utils;
 
 
-import com.gdut.gcb.operation.bo.SymbolConstant;
+import com.gdut.gcb.operation.bo.Constant;
 
 
 /**
@@ -10,9 +10,9 @@ import com.gdut.gcb.operation.bo.SymbolConstant;
  * @Date 2020/10/11 22:08
  * @Version 1.0
  **/
-public class OperatorUtil {
+public class OerationUtil {
 
-    private final static Character[] operatorTypes = new Character[]{SymbolConstant.PLUS,SymbolConstant.MINUS,SymbolConstant.MULTIPLY,SymbolConstant.DIVIDE};
+    private final static Character[] operatorTypes = new Character[]{Constant.PLUS, Constant.MINUS, Constant.MULTIPLY, Constant.DIVIDE};
 
     /**
      * 随机获取num个运算符的数组

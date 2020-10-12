@@ -2,7 +2,7 @@ package com.gdut.gcb.operation.controller;
 
 import com.gdut.gcb.operation.bo.Subject;
 import com.gdut.gcb.operation.common.api.CommonResult;
-import com.gdut.gcb.operation.utils.ExpressionUtil;
+import com.gdut.gcb.operation.utils.MathExpressionUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.constraints.Pattern;
 import java.util.List;
-import java.util.Map;
 
 /**
  * @Author 古春波
@@ -38,7 +37,7 @@ public class ExerciseController {
             @RequestParam("num") String num,
             @Pattern(regexp = "^[1-9][0-9]*$", message = "round格式错误")
             @RequestParam("round") String round){
-        List<Subject> questionAndResultMap = ExpressionUtil.generateLitst(new Integer(num), new Integer(round));
+        List<Subject> questionAndResultMap = MathExpressionUtil.generateLitst(new Integer(num), new Integer(round));
         return CommonResult.success(questionAndResultMap);
     }
     

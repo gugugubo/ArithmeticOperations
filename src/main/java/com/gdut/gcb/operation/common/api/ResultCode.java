@@ -1,8 +1,12 @@
 package com.gdut.gcb.operation.common.api;
 
+
 /**
- * 枚举了一些常用API操作码
- */
+ * @Author 古春波
+ * @Description 枚举了一些常用API操作码
+ * @Date 2020/10/11 22:08
+ * @Version 1.0
+ **/
 public enum ResultCode implements IErrorCode {
     SUCCESS(200, "操作成功"),
     FAILED(500, "操作失败"),

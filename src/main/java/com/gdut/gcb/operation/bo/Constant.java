@@ -9,15 +9,12 @@ import java.io.File;
  * @Date 2020/10/11 22:08
  * @Version 1.0
  **/
-public class SymbolConstant {
+public class Constant {
     public static final Character PLUS = '+';
     public static final Character MINUS = '-';
     public static final Character MULTIPLY = '*';
     public static final Character DIVIDE  = '÷';
     public static final Character EQUALS  = '=';
-    /**
-     * "F:\\file";10.3修改生成文件地址
-     */
     public static final String PRINT_FILE_URL = System.getProperty("user.dir")+ File.separator+"question_bank";
 
 }
