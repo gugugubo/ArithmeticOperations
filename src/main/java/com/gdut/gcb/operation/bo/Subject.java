@@ -3,6 +3,7 @@ package com.gdut.gcb.operation.bo;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
  * @Author 古春波
@@ -14,6 +15,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
+@ToString
 public class Subject {
     
     private String question;

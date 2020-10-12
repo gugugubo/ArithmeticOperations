@@ -9,13 +9,11 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-/**
- * 全局异常处理
- */
+
 
 /**
  * @Author 古春波
- * @Description 枚举了一些常用API操作码
+ * @Description 全局异常处理
  * @Date 2020/10/11 22:08
  * @Version 1.0
  **/
@@ -58,4 +56,11 @@ public class GlobalExceptionHandler {
         }
         return CommonResult.validateFailed(message);
     }
+
+    @ResponseBody
+    @ExceptionHandler(value = Exception.class)
+    public CommonResult toException(Exception e) {
+        return CommonResult.failed(e.getMessage());
+    }
+    
 }
